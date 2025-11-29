@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>work-out-planner/nutrition.dev</title>
+  <script src="https://kit.fontawesome.com/f16f489acd.js" crossorigin="anonymous"></script>
+  <style>
+    .blog-article-container {max-width: 900px;  margin: 2rem auto; padding: 1rem; line-height: 1.7;
+             font-family: "Poppins", sans-serif; color: #333; }
+
+    .blog-article h1 {  background: linear-gradient(90deg, #ffd166, #ff6b6b); background-clip: text; color: transparent;
+            font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem;} 
+
+    .blog-article .date {color: #888; font-size: 0.9rem; margin-bottom: 1.5rem;}
+
+    .blog-article img.article-img { width: 100%;  border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);}
+
+    .blog-article h2 {margin-top: 1.5rem;color: var(--accent, #ff6b6b);}
+  
+    .related-posts {margin-top: 3rem; background: var(--accent-2, #ffd166);  padding: 1rem 1.5rem; border-radius: 10px;}
+
+    .related-posts h3 {color: var(--dark, #0f1724);  margin-bottom: 0.8rem;}
+
+    .related-posts a {color: var(--dark, #0f1724); text-decoration: none; display: block; margin-bottom: 0.4rem;}
+
+    .related-posts a:hover { text-decoration: underline;}
+
+    header { top: 0; z-index: 50; background: rgba(255,255,255,0.95);  backdrop-filter: blur(6px);
+      box-shadow: 0 6px 18px rgba(15,23,36,0.06); position: sticky;}
+
+    .site-header{ display: flex; align-items: center; margin-left: 0; justify-content: center;  ;
+      font-weight: 600; font-size: 20px; transition: color 0.3s ease; text-decoration: none;}
+
+    .nav-sub a{text-decoration: none;   padding: 8px 12px; border-radius: 8px;
+      color: var(--dark); font-weight: 600; display: inline-block; margin-left: 20px;
+      transition: background .18s ease, color .18s ease, transform .18s ease; 
+      background: linear-gradient(90deg, #ffd166, #ff6b6b); background-clip: text; color: transparent;}
+
+    .logo{background: linear-gradient(90deg, #ffd166, #ff6b6b); background-clip: text; color: transparent;
+      margin-left: 0%; margin-right: 35%; }
+      
+    footer{display: flex; justify-content: center; align-items: center; font-size: 20px; font-weight: 600; color: #ff6b6b; margin-right: 40%;}
+
+    .iron{display: flex; justify-content: center; align-items: center; gap: 12px;}    
+  
+    /* ---------- TABLET VIEW (max-width: 768px) ---------- */
+    @media (max-width: 768px) {.site-header { flex-direction: column; text-align: center; padding: 1rem;}
+    .nav-sub {  margin-top: 0.5rem;}
+    .nav-sub a {margin: 0 0.8rem; display: inline-block;}
+    .blog-article-container { flex-direction: column; padding: 1.5rem;}
+    .related-posts { width: 100%; margin-top: 2rem;}
+    .iron {flex-direction: column; align-items: center; }
+    .iron img, .iron video {width: 100%; height: auto; }
+    }
+
+    /* ---------- MOBILE VIEW (max-width: 480px) ---------- */
+    @media (max-width: 480px) {
+    .site-header { padding: 0.8rem;  }
+    header{ position:sticky; top: 0; z-index: 50;}
+    .site-header .logo {font-size: 1.2rem; }
+    .nav-sub a { display: block; margin: 0.5rem 0;}
+    .blog-article-container {padding: 1rem;}
+    .related-posts {margin-top: 1.5rem;}
+    .article-img,.iron img,.iron video {width: 100%; height: auto;} 
+    .footer-copy {padding: 0.8rem; font-size: 0.8rem;}
+    }
+
+
+
+   /* === TOGGLE BUTTON === */
+   .menu-toggle {display: none;font-size: 1.8rem;background: none;border: none;color: #f5e505; cursor: pointer; margin-left: 75%;}
+
+   /* === MOBILE RESPONSIVE MENU === */
+   @media (max-width: 768px) {
+   .menu-toggle {display: block;}
+   .nav-sub {display: none;flex-direction: column;position: absolute;top: 60px;right: 0; width: 100%;background: #111;text-align: center;padding: 10px 0;}
+   .nav-sub a {display: block;padding: 10px 0;border-top: 1px solid #222;}
+   .nav-sub.active {display: flex;}
+ 
+  }
+
+
+  </style>
+</head>
+<body>
+
+ 
+  <?php include('../includes/header.php'); ?>
+
+  <header class="site-header">
+    <a href="../index.php" class="logo">Workout Planner</a>
+     <!-- Hamburger button -->
+  <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+    ☰
+  </button>
+    <nav class="nav-sub" id="nav-sub">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#blogs">Blog</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="blog-article-container">
+    <article class="blog-article">
+      <h1>Nutrition Basics for Better Results</h1>
+      <p class="date">Published on Oct 25, 2025</p>
+
+      <img src="../images/nutrition-basics.webp" alt="HIIT workout" class="article-img">
+
+      <p>
+        Simple meal and timing tips to fuel your workouts and recovery.
+        Fuel your circulation with nutrient-rich foods that support heart and organ health.
+        Focus on fruits, vegetables, lean proteins, and healthy fats for lasting energy.
+        Stay hydrated and limit processed foods to keep your blood flowing smoothly.
+      </p>
+
+      <h2>1.Eat a Balanced Plate </h2>
+      <p>A balanced plate fuels your body with the right mix of nutrients for strength and endurance.
+         Combine lean proteins, whole grains, colorful veggies,colorful fruits and healthy fats in every meal to give your body complete nourishment.
+         This balance helps maintain steady energy, muscle growth, and faster recovery.
+      </p>
+      <div class="iron">
+        <video src="../video/balanced-meal.mp4"  controls class="article-img" width="420" height="240"></video>
+        <video src="../video/balanced.mp4"  controls class="article-img" width="420" height="240"></video>
+      </div>
+      
+
+      <h2>2 Stay Hydrated  </h2>
+      <p> 
+        Drink water consistently throughout the day to maintain energy and support organ function. 
+        Water supports every function in your body, from circulation to recovery. Drink steadily throughout the day and increase intake during workouts. 
+        Hydration keeps your body alert, energized, and glowing.
+      </p>
+      <div class="iron">
+        <img src="../images/hydrate.webp" alt="Iron and Antioxidants" class="article-img" width="320" height="240">
+        <img src="../images/melon.webp" alt="Iron and Antioxidants" class="article-img " width="320" height="240">
+      </div>
+      
+
+      <h2>3.Choose Heart-Healthy Fats</h2>
+      <p>Healthy fats keep your heart strong and support long-term energy for workouts.
+         Include avocados, olive oil, nuts, and fish rich in omega-3s to improve circulation and reduce inflammation.
+         They help reduce bad cholesterol and improve overall body performance and recovery.
+      </p>
+      <div class="iron">
+        <img src="../images/avocado.webp" alt="Iron and Antioxidants" class="article-img" width="320" height="240">
+        <img src="../images/peanut.webp" alt="Iron and Antioxidants" class="article-img " width="320" height="240">
+      </div>
+      
+
+
+      <h2>4.Limit Processed Foods and Sugar </h2>
+      <p>  Cut back on processed snacks, sugary drinks, and fast foods that drain your energy.
+           Whole, natural foods keep your body fueled and your metabolism balanced.
+           Choose nourishment over convenience your long-term health will thank you.</p>
+      <div class="iron">
+        <img src="../images/processed.webp" alt="Iron and Antioxidants" class="article-img" width="320" height="240">
+        <video src="../video/sugarless.mp4" controls class="article-img" width="420" height="240"></video>
+      </div>
+
+      <h2> 5.Boost with Iron and Antioxidants</h2>
+      <p>Iron supports oxygen flow to your muscles, keeping you energized during workouts.
+         Antioxidants fight fatigue and help your body recover faster after training.
+         Include leafy greens, beans, berries, and citrus fruits in your daily meals for a natural boost.
+         Eat spinach, citrus fruits, and berries to enhance oxygen transport and protect blood vessels.</p> 
+      <div class="iron">
+        <img src="../images/irony.webp" alt="Iron and Antioxidants" class="article-img" width="320" height="240">
+        <img src="../images/iron-food.webp" alt="Iron and Antioxidants" class="article-img " width="320" height="240">
+      </div>
+    </article>
+
+    <aside class="related-posts">
+      <h3>Related Posts</h3>
+      <ul>
+        <li><a href="healthtips.html">Healthy Tips</a></li>
+        <li><a href="recovery.html">Sleep, Rest, and Mobility Tips</a></li>
+        <li><a href="circulation.html">6 Moves to Boost Your Blood Circulation to Vital Organs</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="footer-copy">
+    <p><i class="fa-solid fa-copyright"></i> 2025 Workout Planner. All rights reserved.</p>
+  </footer>
+
+  <?php include('../includes/footer.php'); ?>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav-sub');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+  });
+  </script>
+
+
+</body>
+</html>

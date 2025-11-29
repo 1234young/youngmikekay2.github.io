@@ -1,0 +1,7 @@
+{
+  "name": "workout/planner",
+  "description": "Workout Planner PHP Project",
+  "require": {
+    "ext-pdo": "*"
+  }
+}

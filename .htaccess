@@ -1,0 +1,45 @@
+# ===============================
+# 🚀 WORK-OUT-PLANNER .htaccess
+# ===============================
+
+# --- Enable browser caching ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/gif "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresDefault "access plus 7 days"
+</IfModule>
+
+# --- Enable GZIP compression ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# --- Main rewrite rules for PHP app ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /work-out-planner/
+
+  # --- 1️⃣ Serve existing files and folders normally ---
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # --- 2️⃣ Allow direct access to PHP files ---
+  RewriteRule ^(.+)\.php$ $1.php [L]
+
+  # --- 3️⃣ Fallback: route all other URLs to index.php ---
+  RewriteRule ^ index.php [L]
+</IfModule>
+
+# --- Optional: Security headers ---
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>

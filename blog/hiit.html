@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>work-out-planner/hiit.dev</title>
+  <script src="https://kit.fontawesome.com/f16f489acd.js" crossorigin="anonymous"></script>
+  <style>
+    .blog-article-container {max-width: 900px;  margin: 2rem auto; padding: 1rem; line-height: 1.7;
+             font-family: "Poppins", sans-serif; color: #333; }
+
+    .blog-article h1 {  background: linear-gradient(90deg, #ffd166, #ff6b6b); background-clip: text; color: transparent;
+            font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem;} 
+
+.blog-article .date {color: #888; font-size: 0.9rem; margin-bottom: 1.5rem;}
+
+.blog-article img.article-img { width: 100%;  border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);}
+
+.blog-article h2 {margin-top: 1.5rem;color: var(--accent, #ff6b6b);}
+  
+.related-posts {margin-top: 3rem; background: var(--accent-2, #ffd166);  padding: 1rem 1.5rem; border-radius: 10px;}
+
+.related-posts h3 {color: var(--dark, #0f1724);  margin-bottom: 0.8rem;}
+
+.related-posts a {color: var(--dark, #0f1724); text-decoration: none; display: block; margin-bottom: 0.4rem;}
+
+.related-posts a:hover { text-decoration: underline;}
+
+header { top: 0; z-index: 50; background: rgba(255,255,255,0.95);  backdrop-filter: blur(6px);
+    box-shadow: 0 6px 18px rgba(15,23,36,0.06); position: sticky;
+}
+.site-header{ display: flex; align-items: center; margin-left: 0; justify-content: center;  ;
+    font-weight: 600; font-size: 20px; transition: color 0.3s ease; text-decoration: none;}
+.nav-sub a{text-decoration: none;   padding: 8px 12px; border-radius: 8px;
+    color: var(--dark); font-weight: 600; display: inline-block; margin-left: 20px;
+    transition: background .18s ease, color .18s ease, transform .18s ease; 
+    background: linear-gradient(90deg, #ffd166, #ff6b6b); background-clip: text; color: transparent;
+}
+
+.logo{background: linear-gradient(90deg, #ffd166, #ff6b6b); background-clip: text; color: transparent;
+      margin-left: 0%; margin-right: 35%; }
+footer{
+  display: flex; justify-content: center; align-items: center; font-size: 20px; font-weight: 600; color: #ff6b6b; margin-right: 40%; text-decoration: none;
+}      
+     
+/* ---------- TABLET VIEW (max-width: 768px) ---------- */
+@media (max-width: 768px) {.site-header { flex-direction: column; text-align: center; padding: 1rem;}
+.nav-sub {  margin-top: 0.5rem;}
+.nav-sub a {margin: 0 0.8rem; display: inline-block;}
+.blog-article-container { flex-direction: column; padding: 1.5rem;}
+.related-posts { width: 100%; margin-top: 2rem;}
+.iron {flex-direction: column; align-items: center; }
+.iron img, .iron video {width: 100%; height: auto; }
+}
+
+/* ---------- MOBILE VIEW (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+  .site-header { padding: 0.8rem;  }
+  header{ position:sticky; top: 0; z-index: 50;}
+  .site-header .logo {font-size: 1.2rem; }
+  .nav-sub a { display: block; margin: 0.5rem 0;}
+  .blog-article-container {padding: 1rem;}
+  .related-posts {margin-top: 1.5rem;}
+  .article-img,.iron img,.iron video {width: 100%; height: auto;} 
+  .footer-copy {padding: 0.8rem; font-size: 0.8rem;}
+}
+
+
+
+/* === TOGGLE BUTTON === */
+.menu-toggle {display: none;font-size: 1.8rem;background: none;border: none;color: #f5e505; cursor: pointer; margin-left: 75%;}
+
+/* === MOBILE RESPONSIVE MENU === */
+@media (max-width: 768px) {
+  .menu-toggle {display: block;}
+  .nav-sub {display: none;flex-direction: column;position: absolute;top: 60px;right: 0; width: 100%;background: #111;text-align: center;padding: 10px 0;}
+  .nav-sub a {display: block;padding: 10px 0;border-top: 1px solid #222;}
+  .nav-sub.active {display: flex;}
+ 
+}
+
+    
+  </style>
+</head>
+<body>
+
+ 
+  <?php include('../includes/header.php'); ?>
+
+  <header class="site-header">
+    <a href="../index.php" class="logo">Workout Planner</a>
+     <!-- Hamburger button -->
+  <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+    ☰
+  </button>
+    <nav class="nav-sub" id="nav-sub">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#blogs">Blog</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="blog-article-container">
+    <article class="blog-article">
+      <h1>5 HIIT Moves to Boost Your Cardio</h1>
+      <p class="date">Published on Oct 1, 2025</p>
+
+      <img src="../images/hiit-girl.webp" alt="HIIT workout" class="article-img">
+
+      <p>
+        HIIT (High-Intensity Interval Training) is a powerful way to burn fat, build endurance,
+        and boost cardiovascular health even with short sessions.
+        Push your limits with short bursts of intense exercise and quick recovery.Burn fat faster and boost your metabolism in less time.
+        A fast-paced workout that keeps your heart racing and energy high.
+      </p>
+
+      <h2>1. Jump Squats</h2>
+      <p>Engage your quads, glutes, and core with explosive power. Do 3 sets of 20 seconds each.</p>
+      <div class="iron">
+        <video src="../video/jump-squat.mp4" controls class="article-img" width="440" height="250"></video>
+        <video src="../video/jumping.mp4" controls class="article-img" width="440" height="260"></video>
+      </div>
+
+      <h2>2. Mountain Climbers</h2>
+      <p>Fire up your abs and shoulders while increasing heart rate rapidly. Do 3 to 4 sets of 20 seconds each.</p>
+      <div class="iron">
+       <video src="../video/climber.mp4" controls class="article-img" width="440" height="250"></video>
+       <video src="../video/climbers.mp4" controls class="article-img" width="440" height="250"></video>
+      </div>
+
+      <h2>3. Plank</h2>
+      <p>A full-body HIIT move that challenges both strength and cardio capacity. Do 3 sets of 60 seconds each.
+         Strengthen your core and improve balance with this simple yet powerful move.
+         Engage your abs, shoulders, and glutes for a total body challenge. Hold steady every second builds endurance and stability.
+      </p>
+      <div class="iron">
+       <video src="../video/planks.mp4" controls class="article-img" width="> 440" height="250"></video>
+       <video src="../video/side-plank.mp4" controls class="article-img" width="440" height="260"></video>
+      </div> 
+
+
+      <h2>4. High Knees</h2>
+      <p>Drive your knees up to waist level while pumping your arms for maximum intensity. Do 3 sets for 30seconds each.</p>
+      <div class="iron">
+        <video src="../video/knees-high.mp4" controls class="article-img" width="440" height="250"></video>
+        <video src="../video/knees.mp4" controls class="article-img" width="440" height="260"></video>
+      </div>
+
+      <h2> 5. HIIT Sprint</h2>
+      <p>Sprint at maximum effort for 30 seconds, then walk or jog for 20 seconds. Repeat for 5 rounds.</p>
+      <div class="iron"> 
+        <video src="../video/sprint.mp4" controls class="article-img" width="440" height="250"></video>
+        <video src="../video/sprinting.mp4" controls class="article-img" width="440" height="250"></video>
+      </div>
+
+      <p>
+        Alternate between 30 seconds of work and 20 seconds of rest.
+        Always warm up properly and cool down afterward.
+      </p>
+    </article>
+
+    <aside class="related-posts">
+      <h3>Related Posts</h3>
+      <ul>
+        <li><a href="nutrition.html">Nutrition Basics for Better Results</a></li>
+        <li><a href="recovery.html">Sleep, Rest, and Mobility Tips</a></li>
+        <li><a href="circulation.html">6 Moves to Boost Your Blood Circulation to Vital Organ</a> </li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="footer-copy">
+    <p><i class="fa-solid fa-copyright"></i> 2025 Workout Planner. All rights reserved.</p>
+  </footer>
+
+  <?php include('../includes/footer.php'); ?>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav-sub');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+  });
+  </script>
+
+</body>
+</html>

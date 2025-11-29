@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>work-out-planner/healthtips.dev</title>
+  <script src="https://kit.fontawesome.com/f16f489acd.js" crossorigin="anonymous"></script>
+  <style>
+    .blog-article-container {max-width: 900px;  margin: 2rem auto; padding: 1rem; line-height: 1.7;
+             font-family: "Poppins", sans-serif; color: #333; }
+
+    .blog-article h1 {  background: linear-gradient(90deg, #ffd166, #ff6b6b); background-clip: text; color: transparent;
+            font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem;} 
+
+.blog-article .date {color: #888; font-size: 0.9rem; margin-bottom: 1.5rem;}
+
+.blog-article img.article-img { width: 100%;  border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);}
+
+.blog-article h2 {margin-top: 1.5rem;color: var(--accent, #ff6b6b);}
+  
+.related-posts {margin-top: 3rem; background: var(--accent-2, #ffd166);  padding: 1rem 1.5rem; border-radius: 10px;}
+
+.related-posts h3 {color: var(--dark, #0f1724);  margin-bottom: 0.8rem;}
+
+.related-posts a {color: var(--dark, #0f1724); text-decoration: none; display: block; margin-bottom: 0.4rem;}
+
+.related-posts a:hover { text-decoration: underline;}
+
+header { top: 0; z-index: 50; background: rgba(255,255,255,0.95);  backdrop-filter: blur(6px);
+    box-shadow: 0 6px 18px rgba(15,23,36,0.06); position: sticky;
+}
+.site-header{ display: flex; align-items: center; margin-left: 0; justify-content: center;  ;
+    font-weight: 600; font-size: 20px; transition: color 0.3s ease; text-decoration: none;}
+.nav-sub a{text-decoration: none;   padding: 8px 12px; border-radius: 8px;
+    color: var(--dark); font-weight: 600; display: inline-block; margin-left: 20px;
+    transition: background .18s ease, color .18s ease, transform .18s ease; 
+    background: linear-gradient(90deg, #ffd166, #ff6b6b); background-clip: text; color: transparent;
+}
+
+.logo{background: linear-gradient(90deg, #ffd166, #ff6b6b); background-clip: text; color: transparent;
+      margin-left: 0%; margin-right: 35%; }
+footer{
+  display: flex; justify-content: center; align-items: center; font-size: 20px; font-weight: 600; color: #ff6b6b; margin-right: 40%;
+}      
+     
+/* ---------- TABLET VIEW (max-width: 768px) ---------- */
+@media (max-width: 768px) {.site-header { flex-direction: column; text-align: center; padding: 1rem;}
+.nav-sub {  margin-top: 0.5rem;}
+.nav-sub a {margin: 0 0.8rem; display: inline-block;}
+.blog-article-container { flex-direction: column; padding: 1.5rem;}
+.related-posts { width: 100%; margin-top: 2rem;}
+.iron {flex-direction: column; align-items: center; }
+.iron img, .iron video {width: 100%; height: auto; }
+}
+
+/* ---------- MOBILE VIEW (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+  .site-header { padding: 0.8rem;  }
+  header{ position:sticky; top: 0; z-index: 50;}
+  .site-header .logo {font-size: 1.2rem; }
+  .nav-sub a { display: block; margin: 0.5rem 0;}
+  .blog-article-container {padding: 1rem;}
+  .related-posts {margin-top: 1.5rem;}
+  .article-img,.iron img,.iron video {width: 100%; height: auto;} 
+  .footer-copy {padding: 0.8rem; font-size: 0.8rem;}
+}
+
+/* === TOGGLE BUTTON === */
+.menu-toggle {display: none;font-size: 1.8rem;background: none;border: none;color: #f5e505; cursor: pointer; margin-left: 75%;}
+
+/* === MOBILE RESPONSIVE MENU === */
+@media (max-width: 768px) {
+  .menu-toggle {display: block;}
+  .nav-sub {display: none;flex-direction: column;position: absolute;top: 60px;right: 0; width: 100%;background: #111;text-align: center;padding: 10px 0;}
+  .nav-sub a {display: block;padding: 10px 0;border-top: 1px solid #222;}
+  .nav-sub.active {display: flex;}
+ 
+}
+    
+  </style>
+</head>
+<body>
+
+ 
+  <?php include('../includes/header.php'); ?>
+
+  <header class="site-header">
+    <a href="../index.php" class="logo">Workout Planner</a>
+     <!-- Hamburger button -->
+  <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+    ☰
+  </button>
+    <nav class="nav-sub" id="nav-sub">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#blogs">Blog</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="blog-article-container">
+    <article class="blog-article">
+      <h1>Healthy Tips: Adopt balanced habits, stay active, nourish your body, and practice self-love.</h1>
+      <p class="date">Published on Oct 25, 2025</p>
+      <img src="../images/health.webp" alt="HIIT workout" class="article-img">
+
+      <p>
+        Small daily choices create lasting wellness and inner strength.
+        Stay consistent with movement, rest, and mindful eating.
+        Prioritize your mental peace as much as your physical health.
+      </p>
+
+      <h2>1.Move Daily</h2>
+      <p>  Engage in at least 30 minutes of physical activity to keep your body strong and your mind clear.
+           Consistent movement keeps your body flexible, strong, and energized.
+           Even light activity like stretching, walking, or mobility drills boosts circulation and mood.
+           Make daily movement a habit your body thrives on consistency, not intensity.
+      </p>
+      <div class="iron">
+        <video src="../video/dayly-move.mp4" controls class="article-img" width="440" height="250"></video>
+        <video src="../video/move-daily.mp4" controls class="article-img" width="440" height="250"></video>
+      </div>
+
+      <h2>2.Eat Mindfully </h2>
+      <p> Listen to your body’s hunger cues and choose whole, nourishing foods that energize you.
+          Slow down and savor each bite to connect with your body’s hunger and fullness cues.
+          Mindful eating improves digestion, prevents overeating, and helps you enjoy your meals.
+          Fuel your body with purpose, not pressure.
+      </p>
+      <div class="iron">
+        <video src="../video/eat-well.mp4" controls class="article-img" width="440" height="250"></video>
+        <video src="../video/sugarless.mp4" controls class="article-img" width="440" height="250"></video>
+      </div>
+
+      <h2>3.Sleep Well</h2>
+      <p> Aim for 7–8 hours of quality rest in a calm, dark environment to help your body repair and recharge.
+          Quality sleep repairs muscles, balances hormones, and boosts your energy for the next day.
+          Your progress starts with how well you recover, not just how hard you train.
+      </p>
+      <div class="iron">
+        <video src="../video/sleep-well.mp4" controls class="article-img" width="440" height="250"></video>
+        <video src="../video/insomnia.mp4" controls class="article-img" width="440" height="250"></video>
+      </div>
+
+
+      <h2>4.Stay Hydrated </h2>
+      <p>  Drink water consistently throughout the day to maintain energy and support organ function.
+           Water supports every function in your body, from circulation to recovery.
+           Drink steadily throughout the day and increase intake during workouts.
+           Hydration keeps your body alert, energized, and glowing.
+      </p>
+      <div class="iron">
+        <video src="../video/hydrate.mp4" controls class="article-img" width="440" height="250"></video>
+        <video src="../video/drink-water.mp4" controls class="article-img" width="440" height="250"></video>
+      </div>
+
+      <h2> 5.Practice Self-Love</h2>
+      <p>  Take time for gratitude, reflection, and rest your mental well-being fuels your physical health.
+           Celebrate your progress, no matter how small, and treat yourself with kindness.
+           Self-love fuels motivation, confidence, and a positive relationship with your goals.
+           Remember, wellness is not perfection, it’s progress and care.
+      </p> 
+      <div class="iron">
+        <video src="../video/love.mp4" controls class="article-img" width="440" height="260"></video>
+        <video src="../video/care.mp4" controls class="article-img" width="440" height="250"></video>
+      </div>
+
+
+    </article>
+
+    <aside class="related-posts">
+      <h3>Related Posts</h3>
+      <ul>
+        <li><a href="nutrition.html">Nutrition Basics for Better Results</a></li>
+        <li><a href="recovery.html">Sleep, Rest, and Mobility Tips</a></li>
+        <li><a href="hiit.html">5 HIIT Moves to Boost Your Cardio</a></li>
+        <li><a href="upperbody.html">6 Upper Body Moves for Physical Strength</a></li>
+        
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="footer-copy">
+    <p><i class="fa-solid fa-copyright"></i> 2025 Workout Planner. All rights reserved.</p>
+  </footer>
+
+  <?php include('../includes/footer.php'); ?>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav-sub');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+  });
+  </script>
+</body>
+</html>
