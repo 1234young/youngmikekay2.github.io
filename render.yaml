@@ -1,0 +1,29 @@
+services:
+  - name: work-out-planner
+    branch: "main"
+    type: web
+    plan: "free"
+    runtime: "python"
+    autoDeploy: true
+
+    buildCommand: ""
+    startCommand: ""
+
+    envVars:
+      - key: DB_HOST
+        value: "mysql-d3c8168-youngmikeowuor7-5b90.g.aivencloud.com"
+
+      - key: DB_PORT
+        value: "20799"
+
+      - key: DB_NAME
+        value: "defaultdb"
+
+      - key: DB_USER
+        value: "avnadmin"
+
+      - key: DB_PASS
+        value: "AWNS_3YNUU-mW7-bDZYyb1tf"
+
+      - key: APP_ENV
+        value: "production"
