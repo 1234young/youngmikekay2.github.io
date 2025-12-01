@@ -184,6 +184,13 @@ nav a:hover {background: var(--glass);
   flex: 1 1 45%;
   min-width: 220px;
 }
+.slider-content h1,
+.slider-content p,
+.slider-content button,
+.slider-image img {
+  transition: opacity 0.3s ease-in-out;
+}
+
 
 .slider-image img {
   width: 100%;
