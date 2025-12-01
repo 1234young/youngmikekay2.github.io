@@ -36,7 +36,7 @@ if ($app_env === 'local') {
     $use_ssl = true;
 
     // SSL certificate path
-    $ssl_ca = __DIR__ . '/certs/ca.pem';
+    $ssl_ca = __DIR__ . '/../certs/ca.pem';
 
 }
 
@@ -88,7 +88,7 @@ try {
 | APP SETTINGS
 */
 
-define('APP_NAME', 'Workout Planner');
+define('APP_NAME', 'work-out-planner');
 define('APP_DEBUG', $app_debug);
 
 ?>

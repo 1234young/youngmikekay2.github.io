@@ -15,9 +15,8 @@ function getDBConnection() {
 
     try {
         if ($isLocal) {
-            // ----------------------------------------
+           
             // LOCAL XAMPP DATABASE
-            // ----------------------------------------
             $dsn  = "mysql:host=localhost;dbname=online fitness training platform;charset=utf8mb4";
             $user = "root";
             $pass = "";
@@ -27,9 +26,8 @@ function getDBConnection() {
             ];
 
         } else {
-            // ----------------------------------------
-            // AIVEN CLOUD DATABASE
-            // ----------------------------------------
+           
+            // AIVEN CLOUD DATABASE (SSL SECURE)
             $sslCA = __DIR__ . '/../certs/ca.pem';  // Path to the CA certificate
 
             $dsn = "mysql:host=" . DB_HOST . ";port=" . DB_PORT . ";dbname=" . DB_NAME . ";charset=utf8mb4";
@@ -37,6 +35,7 @@ function getDBConnection() {
             $user = DB_USER;
             $pass = DB_PASS;
 
+            // *** SSL + PDO secure connection ***
             $options = [
                 PDO::MYSQL_ATTR_SSL_CA => $sslCA,
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
