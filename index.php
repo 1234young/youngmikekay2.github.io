@@ -116,7 +116,7 @@
         Our certified trainers are dedicated to providing personalized coaching and support,
         ensuring you achieve your fitness goals effectively and safely.
       </p>
-     <button id="slide-btn" > Meet Our Trainers</button>
+     <button id="slide-btn" onclick="window.location.href='trainers.php'"> Meet Our Trainers </button>
     </div>
 
     <!-- Right image -->
