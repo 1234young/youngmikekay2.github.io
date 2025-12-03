@@ -12,9 +12,9 @@ $app_debug = getenv('APP_DEBUG') === 'true' ? true : false;
 */
 if ($app_env === 'local') {
 
-    $db_host = 'localhost';
+    $db_host = '127.0.0.1'; // force TCP
     $db_port = 3306;
-    $db_name = 'online fitness training platform';
+    $db_name = 'online_fitness';
     $db_user = 'root';
     $db_pass = '';
     $use_ssl = false;
@@ -27,11 +27,15 @@ if ($app_env === 'local') {
 | Render injects DB variables. If not, we fallback safely.
 */
 
-    $db_host = getenv('DB_HOST') ?: 'mysql-d3c8168-youngmikeowuor7-5b90.g.aivencloud.com';
+    $db_host = getenv('DB_HOST') ?: 'mysql-db-youngmikeowuor7-5b90.g.aivencloud.com';
     $db_port = getenv('DB_PORT') ?: 20799;
     $db_name = getenv('DB_NAME') ?: 'defaultdb';
     $db_user = getenv('DB_USER') ?: 'avnadmin';
-    $db_pass = getenv('DB_PASS') ?: 'AVNS_3YNUU-mWT-bDZYyb1tf';
+   $db_pass = getenv('DB_PASS');
+      if (!$db_pass) {
+         die("Database password is not set in environment variables.");
+      }
+
 
     $use_ssl = true;
 
