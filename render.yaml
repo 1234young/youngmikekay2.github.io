@@ -23,7 +23,7 @@ services:
         value: "avnadmin"
 
       - key: DB_PASS
-        value: "AWNS_3YNUU-mW7-bDZYyb1tf"
+        value: ${DB_PASS}
 
       - key: APP_ENV
         value: "production"
